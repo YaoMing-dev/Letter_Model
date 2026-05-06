@@ -1,0 +1,53 @@
+# Python
+.venv312/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Secrets & credentials
+.env
+.env.*
+credentials.json
+token.json
+client_secret*.json
+*.json.key
+gcp_*.json
+
+# Model weights (large files)
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+runs/
+# Ngoại lệ: model đã train
+!models/yolo_regions/**/weights/best.pt
+
+# Data (images & labels — không commit raw data)
+data/raw_images/
+data/labels/
+data/yolo_dataset/images/
+data/yolo_dataset/labels/
+data/ocr_crops/
+data/ocr_labels/
+data/processed/
+data/ner_data/
+
+# EasyOCR & HuggingFace cache
+~/.EasyOCR/
+~/.cache/huggingface/
+
+# Backend binary
+backend/mail-ocr-backend
+backend/mail-ocr-backend.exe
+
+# Misc
+train.log
+*.log
+train_data/
+valid_data/
+check_imports.py
+extract_text.py
+install.ps1
